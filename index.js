@@ -13,7 +13,11 @@ app.use(express.json());
 
 // registro y login
 
-app.use('/api', require('./routes/jwtAuth'));
+app.use('/auth', require('./routes/jwtAuth'));
+
+// dashboard
+
+app.use('/dashboard', require('./routes/dashboard'));
 
 app.listen(5000, () => {
     console.log('server has started on port 5000');
