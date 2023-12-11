@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const pool = require('./db');
 
 
 // middleware
@@ -22,6 +21,10 @@ app.use('/dashboard', require('./routes/dashboard.js'));
 // productos
 
 app.use('/productos', require('./routes/productos.js'));
+
+// ordenes de compra
+
+app.use('/ordenescompra', require('./routes/ordenesCompra.js'));
 
 
 
